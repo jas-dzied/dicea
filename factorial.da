@@ -1,0 +1,8 @@
+define factorial [
+      set result 1;
+      while (notequal number 0) [
+              set result (times result number);
+              set number (subtract number 1);:w
+      ];
+      return result;
+] number;

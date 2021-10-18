@@ -1,0 +1,10 @@
+define list.index [
+       return (python_eval (adds (repr list) "[" (string idx) "]"));
+] list idx;
+define list.slice [
+       return (python_eval (adds (repr list) "[" (string start) ":" (string end) "]"));
+] list start end;
+define list.join [
+       set eval-string (adds (repr delim) ".join(" (repr list) ")");
+       return (python_eval eval-string);
+] list delim;

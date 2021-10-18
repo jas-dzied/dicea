@@ -1,0 +1,16 @@
+lib "#list";
+
+set mylist (list "a" "b" "c" "d" "e" "f" "g" "h");
+
+println (list.index mylist 3);
+println (list.slice mylist 1 4);
+println (list.join mylist "|");
+
+for item mylist [
+    println item;
+];
+
+const modi ">";
+
+define mapfunc (add item modi) item;
+println (map mylist mapfunc);
